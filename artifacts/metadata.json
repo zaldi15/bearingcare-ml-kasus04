@@ -1,0 +1,171 @@
+{
+  "version": "1.0.0",
+  "project": "Kasus 04 - Diagnosis Kerusakan Bearing",
+  "selected_model": "Random Forest",
+  "labels": [
+    "normal",
+    "outer_race",
+    "inner_race",
+    "bola"
+  ],
+  "display_labels": {
+    "normal": "Normal",
+    "outer_race": "Kerusakan cincin luar",
+    "inner_race": "Kerusakan cincin dalam",
+    "bola": "Kerusakan bola"
+  },
+  "features_input": [
+    "posisi_sensor",
+    "kecepatan_rpm",
+    "beban_kN",
+    "suhu_housing_C",
+    "rms_g",
+    "puncak_g",
+    "kurtosis",
+    "crest_factor",
+    "energi_bpfo",
+    "energi_bpfi",
+    "energi_bsf",
+    "frekuensi_dominan_hz"
+  ],
+  "features_engineered": [
+    "energi_total",
+    "rasio_bpfo",
+    "rasio_bpfi",
+    "rasio_bsf",
+    "frekuensi_per_putaran",
+    "puncak_dibagi_rms"
+  ],
+  "engineered_features": true,
+  "threshold": "not applicable (4-class argmax)",
+  "split": {
+    "seed": 42,
+    "train": 10500,
+    "validation": 2250,
+    "test": 2250,
+    "approach": "stratified random 70/15/15; deduplicate before splitting"
+  },
+  "validation_results": [
+    {
+      "model": "Logistic Regression (baseline)",
+      "macro_f1": 0.68939,
+      "accuracy": 0.74311,
+      "weighted_f1": 0.75225,
+      "engineered_features": false
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1": 0.79837,
+      "accuracy": 0.83822,
+      "weighted_f1": 0.83357,
+      "engineered_features": true
+    },
+    {
+      "model": "Extra Trees",
+      "macro_f1": 0.7855,
+      "accuracy": 0.82667,
+      "weighted_f1": 0.82274,
+      "engineered_features": true
+    }
+  ],
+  "test_results": {
+    "Logistic Regression (baseline)": {
+      "macro_f1": 0.68984,
+      "accuracy": 0.73689,
+      "weighted_f1": 0.74847
+    },
+    "Random Forest": {
+      "macro_f1": 0.79718,
+      "accuracy": 0.83689,
+      "weighted_f1": 0.83268
+    }
+  },
+  "test_classification_report": {
+    "normal": {
+      "precision": 0.8154172560113154,
+      "recall": 0.935117599351176,
+      "f1-score": 0.8711749149981111,
+      "support": 1233.0
+    },
+    "outer_race": {
+      "precision": 0.8811881188118812,
+      "recall": 0.7807017543859649,
+      "f1-score": 0.827906976744186,
+      "support": 456.0
+    },
+    "inner_race": {
+      "precision": 0.8764044943820225,
+      "recall": 0.7155963302752294,
+      "f1-score": 0.7878787878787878,
+      "support": 327.0
+    },
+    "bola": {
+      "precision": 0.8484848484848485,
+      "recall": 0.5982905982905983,
+      "f1-score": 0.7017543859649122,
+      "support": 234.0
+    },
+    "accuracy": 0.8368888888888889,
+    "macro avg": {
+      "precision": 0.855373679422517,
+      "recall": 0.7574265705757421,
+      "f1-score": 0.7971787663964992,
+      "support": 2250.0
+    },
+    "weighted avg": {
+      "precision": 0.8410493257993535,
+      "recall": 0.8368888888888889,
+      "f1-score": 0.8326805073511879,
+      "support": 2250.0
+    }
+  },
+  "test_confusion_matrix": [
+    [
+      1153,
+      36,
+      27,
+      17
+    ],
+    [
+      96,
+      356,
+      1,
+      3
+    ],
+    [
+      82,
+      6,
+      234,
+      5
+    ],
+    [
+      83,
+      6,
+      5,
+      140
+    ]
+  ],
+  "data_audit": {
+    "rows_raw": 15220,
+    "exact_duplicates": 220,
+    "rows_clean": 15000,
+    "missing_suhu": 150,
+    "missing_kurtosis": 450,
+    "rpm_zero_or_negative": 60,
+    "rms_zero_or_negative": 45,
+    "unique_ids": 15000,
+    "class_counts": {
+      "normal": 8219,
+      "outer_race": 3039,
+      "inner_race": 2178,
+      "bola": 1564
+    }
+  },
+  "selection_rule": "max macro F1 on validation only; refit train+validation; evaluate locked models on test once",
+  "note": "Data sintetis; prediksi membantu inspeksi, bukan diagnosis mekanis definitif.",
+  "versions": {
+    "sklearn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.4.6"
+  }
+}
