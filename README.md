@@ -1,19 +1,18 @@
-# BearingCare — Diagnosis Kerusakan Bearing
+# BearingCare - Diagnosis Kerusakan Bearing
 
 Proyek Machine Learning MKB UPI · Kasus 04
 
 **Aplikasi:** https://bearingcare-kasus04.streamlit.app/  
 **Repository:** https://github.com/zaldi15/bearingcare-ml-kasus04  
-**Video demo:** Belum tersedia
+**Video demo:** 
 
 ## Anggota kelompok
 
 | Nama | NIM | Kontribusi |
 |---|---|---|
-| [Nama anggota 1] | [NIM] | [Bagian yang dikerjakan] |
+| [Zaldi Arifa | [2406326] | [Semua] |
 | [Nama anggota 2] | [NIM] | [Bagian yang dikerjakan] |
-| [Nama anggota 3] | [NIM] | [Bagian yang dikerjakan] |
-| [Nama anggota 4, jika ada] | [NIM] | [Bagian yang dikerjakan] |
+
 
 ## 1. Masalah dan tujuan
 
@@ -129,8 +128,6 @@ bearingcare-ml-kasus04/
 └── README.md
 ```
 
-Untuk kelengkapan pengumpulan, **notebook hasil eksekusi, data mentah, serta laporan dan dokumentasi** masih perlu ditambahkan ke repository, misalnya di `notebooks/`, `data/`, dan `docs/`. Bagian tersebut tidak ditampilkan sebagai file yang sudah tersedia.
-
 ## 7. Menjalankan secara lokal
 
 Gunakan Python 3.12 dengan struktur folder seperti di atas. Dari direktori utama proyek:
@@ -153,17 +150,6 @@ Untuk mengulangi eksperimen, gunakan notebook praktikum bersama dataset `raw.csv
 - Saran suku cadang bersifat umum; ukuran dan spesifikasi komponen tetap harus diperiksa oleh teknisi.
 
 Pengembangan berikutnya dapat menggunakan data lapangan, validasi antar-mesin, evaluasi kalibrasi, dan pemantauan penurunan kinerja model dari waktu ke waktu.
-
-## 9. Daftar periksa pengumpulan
-
-- [x] Repository GitHub publik tersedia.
-- [x] Baseline dan model pembanding telah dievaluasi.
-- [x] Model final dan metadata tersimpan.
-- [x] Aplikasi Streamlit telah di-deploy dan dicoba secara manual.
-- [ ] Nama, NIM, dan pembagian kontribusi anggota dilengkapi; seluruh anggota ditambahkan sebagai collaborator.
-- [ ] Notebook beserta output dan dataset ditambahkan ke repository.
-- [ ] Uji input tidak wajar didokumentasikan.
-- [ ] Laporan PDF (maksimal 6 halaman) dan tautan video demo (maksimal 5 menit) dilengkapi.
 
 ## Referensi dan alat bantu
 
