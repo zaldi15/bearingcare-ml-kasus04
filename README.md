@@ -11,7 +11,7 @@ Proyek Machine Learning MKB UPI · Kasus 04
 | Nama | NIM | Kontribusi |
 |---|---|---|
 | [Zaldi Arifa] | [2406326] | [] |
-| [Nama anggota 2] | [NIM] | [Bagian yang dikerjakan] |
+| [Subhan Bugi Ramadhana] | [2402723] | [Data preprocessing, EDA] |
 
 
 ## 1. Masalah dan tujuan
