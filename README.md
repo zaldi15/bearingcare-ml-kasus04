@@ -4,14 +4,14 @@ Proyek Machine Learning MKB UPI · Kasus 04
 
 **Aplikasi:** https://bearingcare-kasus04.streamlit.app/  
 **Repository:** https://github.com/zaldi15/bearingcare-ml-kasus04  
-**Video demo:** 
+**Video demo:** https://youtu.be/OmIQ_AzIu3M
 
 ## Anggota kelompok
 
 | Nama | NIM | Kontribusi |
 |---|---|---|
-| [Zaldi Arifa] | [2406326] | [] |
-| [Subhan Bugi Ramadhana] | [2402723] | [Data preprocessing, EDA] |
+| [Zaldi Arifa] | [2406326] | [Training Model, Evaluasi, Integrasi Streamlit] |
+| [Subhan Bugi Ramadhana] | [2402723] | [Data preprocessing, EDA, Dokumentasi] |
 
 
 ## 1. Masalah dan tujuan
